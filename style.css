@@ -1,0 +1,111 @@
+.stApp {
+    background-color: #0f172a;
+}
+
+
+/* Main text */
+h1, h2, h3 {
+    color: #f8fafc !important;
+}
+
+
+p {
+    color: #cbd5e1 !important;
+}
+
+
+/* Hero and Cards */
+.home-card {
+    background-color: #1e293b;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #334155;
+}
+
+
+.home-card h3 {
+    color: #f8fafc !important;
+}
+
+
+.home-card p {
+    color: #cbd5e1 !important;
+}
+
+
+/* Metric Cards */
+[data-testid="stMetric"] {
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #334155;
+}
+
+
+[data-testid="stMetricValue"] {
+    color: #ffffff !important;
+}
+
+
+[data-testid="stMetricLabel"] {
+    color: #cbd5e1 !important;
+}
+
+
+/* Dataframe */
+[data-testid="stDataFrame"] {
+    background-color: #1e293b;
+}
+
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background-color: #020617;
+}
+
+
+section[data-testid="stSidebar"] * {
+    color: white !important;
+}
+
+
+/* Buttons */
+.stButton button {
+    background-color: #2563eb !important;
+    color: white !important;
+    border-radius: 10px;
+}
+
+
+/* Footer */
+.footer-box {
+    background-color: #020617;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+
+.footer-box h3 {
+    color: white !important;
+}
+
+
+.footer-box p {
+    color: #cbd5e1 !important;
+}
+
+
+footer {
+    visibility: hidden;
+}
+
+
+#MainMenu {
+    visibility: hidden;
+}
+
+
+.block-container {
+    padding-top: 2rem;
+}
