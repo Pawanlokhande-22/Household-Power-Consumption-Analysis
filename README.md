@@ -1,166 +1,199 @@
 # ⚡ Household Power Consumption Analysis Dashboard
 
-A professional **Data Analytics Dashboard** built using **Python, Pandas, NumPy, Matplotlib, Seaborn, and Streamlit** to analyze household electricity consumption patterns and generate meaningful insights through interactive visualization.
+A professional **Data Analytics Dashboard** built using **Python, Pandas, Streamlit, Matplotlib, Seaborn, and Plotly** to analyze household electricity consumption and generate meaningful insights through interactive visualizations.
 
 ---
 
-## 📌 Project Overview
+## 🚀 Live Demo
 
-Electricity consumption data helps in understanding energy usage behavior, consumption trends, and daily usage patterns.
+🔗 **Live Dashboard:** https://household-power-consumption-analysis-spapppjxfnjeirg2jahvfhf.streamlit.app/
 
-This project performs complete **Exploratory Data Analysis (EDA)** on household power consumption data and provides an interactive dashboard for better understanding and visualization of electricity usage.
-
----
-
-## 🎯 Objectives
-
-- Analyze household electricity consumption patterns
-- Understand power usage trends over time
-- Perform data cleaning and preprocessing
-- Generate meaningful visual insights
-- Build an interactive analytics dashboard
+📂 **GitHub Repository:** https://github.com/Pawanlokhande-22/Household-Power-Consumption-Analysis
 
 ---
 
-# 🚀 Features
+## 📸 Dashboard Preview
 
-✅ Interactive Streamlit Dashboard  
-✅ Complete Data Cleaning  
-✅ Exploratory Data Analysis (EDA)  
-✅ Missing Value Handling  
-✅ Statistical Summary Analysis  
-✅ Data Visualization  
-✅ Consumption Trend Analysis  
-✅ Search and Filter Records  
-✅ Dataset Download Option  
-✅ Professional Dashboard Interface  
+![Dashboard Preview](Screenshots/Screenshot.png)
 
 ---
 
-# 🛠️ Technologies Used
+# 📖 Project Overview
 
-| Technology | Purpose |
-|------------|---------|
-| Python | Programming Language |
-| Pandas | Data Manipulation |
-| NumPy | Numerical Computing |
-| Matplotlib | Data Visualization |
-| Seaborn | Statistical Visualization |
-| Streamlit | Dashboard Development |
-| Jupyter Notebook | Data Analysis |
+This project analyzes household electricity consumption data and provides an interactive dashboard for exploring power usage patterns, identifying trends, and generating business insights.
+
+The dashboard includes:
+
+- 📊 Interactive Dashboard
+- 📈 Exploratory Data Analysis (EDA)
+- 🧹 Data Cleaning
+- 📋 Dataset Analysis
+- 📉 Statistical Summary
+- 📊 Interactive Charts
+- 💡 Business Insights
+
+---
+
+# 🛠️ Tech Stack
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Plotly
+- Streamlit
+- OpenPyXL
 
 ---
 
 # 📂 Project Structure
 
-Household-Power-Consumption-Analysis/
-
+```
+Household-Power-Consumption-Analysis
 │
-├── app.py
-│ └── Streamlit Dashboard Application
-│
-├── Cleaned_Household_Power_Consumption.xls
-│ └── Clean Dataset
-│
-├── EDA_Analysis.ipynb
-│ └── Exploratory Data Analysis
-│
+├── App.py
 ├── requirements.txt
+├── style.css
+├── README.md
+├── Cleaned_Household_Power_Consumption.xls
+├── Filtered_Dataset.csv
 │
-└── README.md
-
-
----
-
-# 📊 Exploratory Data Analysis
-
-The project includes:
-
-- Dataset Overview
-- Data Type Analysis
-- Missing Value Detection
-- Statistical Analysis
-- Univariate Analysis
-- Correlation Analysis
-- Trend Analysis
-- Visualization of Important Features
+├── pages
+│   ├── 1_Home.py
+│   ├── 2_Dataset.py
+│   ├── 3_Data_cleaning.py
+│   ├── 4_EDA.py
+│   └── 5_About.py
+│
+└── Screenshots
+    └── Screenshot.png
+```
 
 ---
 
-# 📈 Dashboard Highlights
+# ✨ Features
 
-The Streamlit dashboard provides:
+✅ Professional Home Dashboard
 
-- 📌 Dataset Information
-- 📊 Interactive Charts
-- ⚡ Power Consumption Analysis
-- 🔍 Data Search Functionality
-- 📥 Dataset Download Feature
-- 📋 Complete EDA Results
+✅ Dataset Overview
+
+✅ Data Cleaning Module
+
+✅ Exploratory Data Analysis
+
+✅ Interactive Visualizations
+
+✅ Statistical Analysis
+
+✅ Business Insights
+
+✅ Modern UI using Streamlit
 
 ---
 
-# ⚙️ Installation & Setup
+# 📊 Dashboard Modules
 
-### Clone Repository
+🏠 Home
+
+📊 Dataset Analysis
+
+📈 EDA Visualization
+
+🧹 Data Cleaning
+
+👨‍💻 About Project
+
+---
+
+# 📌 Project Workflow
+
+```
+Raw Dataset
+      │
+      ▼
+Data Cleaning
+      │
+      ▼
+Data Preprocessing
+      │
+      ▼
+Exploratory Data Analysis
+      │
+      ▼
+Data Visualization
+      │
+      ▼
+Interactive Dashboard
+      │
+      ▼
+Business Insights
+```
+
+---
+
+# 📈 Key Insights
+
+- Analyzed household electricity consumption patterns.
+- Identified power usage trends.
+- Built interactive visual dashboards.
+- Performed data cleaning and preprocessing.
+- Generated meaningful analytical insights.
+
+---
+
+# 🎯 Skills Demonstrated
+
+- Data Analysis
+- Data Cleaning
+- Data Visualization
+- Exploratory Data Analysis
+- Dashboard Development
+- Python Programming
+- Streamlit Development
+- Business Analytics
+
+---
+
+# ▶️ Installation
+
+Clone the repository
 
 ```bash
 git clone https://github.com/Pawanlokhande-22/Household-Power-Consumption-Analysis.git
+```
 
-Move into Project Folder
+Move into project
+
+```bash
 cd Household-Power-Consumption-Analysis
+```
 
-Python | Pandas | NumPy | Data Analytics | Visualization | Streamlit
+Install dependencies
 
-Install Required Libraries
+```bash
 pip install -r requirements.txt
+```
 
-▶️ Run Application
+Run the application
 
-Start Streamlit Dashboard:
-streamlit run app.py
-The dashboard will open automatically in your browser.
+```bash
+streamlit run App.py
+```
 
-📷 Dashboard Preview
-![Dashboard Preview](screenshots/Screenshot.png)
+---
 
-📌 Project Workflow
+# 👨‍💻 Author
 
-Data Collection
-        ↓
-Data Cleaning
-        ↓
-Data Preprocessing
-        ↓
-Exploratory Data Analysis
-        ↓
-Data Visualization
-        ↓
-Streamlit Dashboard
-        ↓
-Insights Generation
+## Pawan Lokhande
 
-🌟 Key Insights
-Analyzed household electricity consumption behavior
-Identified usage trends and patterns
-Created interactive visual reports
-Developed a complete end-to-end analytics project
+🎓 B.Tech – Computer Science & Engineering (Data Science)
 
-📚 Skills Demonstrated
+### Connect with Me
 
-Data Analysis
-Data Cleaning
-Exploratory Data Analysis
-Data Visualization
-Dashboard Development
-Python Programming
+- GitHub: https://github.com/Pawanlokhande-22
+- LinkedIn: *(Add your LinkedIn profile link here)*
 
-👨‍💻 Author
+---
 
-Pawan Lokhande
-
-B.Tech CSE (Data Science)
-
-Skills
-
-Python | Pandas | NumPy | Data Analytics | Visualization | Streamlit
+## ⭐ If you like this project, don't forget to Star this repository!
