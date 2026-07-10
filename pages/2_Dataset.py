@@ -231,14 +231,14 @@ with download_col1:
 
 
 
-    with open("Filtered_Dataset.csv", "rb") as f:
-        st.download_button(
-            "⬇ Download Csv",
-            data=f,
-            file_name="Filtered_Dataset.xlsx",
-            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-        )
+    csv = filtered_df.to_csv(index=False).encode("utf-8")
 
+st.download_button(
+    label="⬇ Download CSV",
+    data=csv,
+    file_name="Filtered_Dataset.csv",
+    mime="text/csv",
+)
 st.divider()
 
 st.subheader("⭐ Dataset Quality Score")
