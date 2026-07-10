@@ -54,21 +54,21 @@ tab1, tab2, tab3 = st.tabs(
 )
 
 with tab1:
-    st.dataframe(df.head(10), use_container_width=True)
+    st.dataframe(df.head(10), width="stretch")
 
 with tab2:
-    st.dataframe(df.tail(10), use_container_width=True)
+    st.dataframe(df.tail(10), width="stretch")
 
 with tab3:
-    st.dataframe(df.sample(10, random_state=42), use_container_width=True)
+    st.dataframe(df.sample(10, random_state=42), width="stretch")
 
 st.divider()
+
 st.subheader("🔍 Search & Filter Dataset")
 
 left, right = st.columns([2, 1])
 
 with left:
-
     search_column = st.selectbox(
         "Select Column",
         df.columns,
@@ -81,7 +81,6 @@ with left:
     )
 
 with right:
-
     month_options = sorted(df["Month"].dropna().unique().tolist())
 
     selected_months = st.multiselect(
@@ -94,7 +93,6 @@ with right:
 filtered_df = df[df["Month"].isin(selected_months)]
 
 if search_value:
-
     filtered_df = filtered_df[
         filtered_df[search_column]
         .astype(str)
@@ -105,7 +103,7 @@ st.success(f"Showing {len(filtered_df):,} Records")
 
 st.dataframe(
     filtered_df,
-    use_container_width=True,
+    width="stretch",
     height=450
 )
 
@@ -122,7 +120,7 @@ info_df = pd.DataFrame({
 
 st.dataframe(
     info_df,
-    use_container_width=True,
+    width="stretch",
     height=500
 )
 
@@ -133,31 +131,18 @@ st.subheader("📊 Dataset Health Report")
 h1, h2, h3 = st.columns(3)
 
 completeness = round(
-    (
-        (df.notnull().sum().sum())
-        /
-        (df.shape[0] * df.shape[1])
-    ) * 100,
+    (df.notnull().sum().sum() / (df.shape[0] * df.shape[1])) * 100,
     2
 )
 
 with h1:
-    st.metric(
-        "✅ Data Completeness",
-        f"{completeness}%"
-    )
+    st.metric("✅ Data Completeness", f"{completeness}%")
 
 with h2:
-    st.metric(
-        "❌ Missing Values",
-        missing_values
-    )
+    st.metric("❌ Missing Values", missing_values)
 
 with h3:
-    st.metric(
-        "📋 Duplicate Rows",
-        duplicate_rows
-    )
+    st.metric("📋 Duplicate Rows", duplicate_rows)
 
 st.divider()
 
@@ -168,9 +153,8 @@ missing_df = pd.DataFrame({
     "Missing": df.isnull().sum().values
 })
 
-st.bar_chart(
-    missing_df.set_index("Column")
-)
+st.bar_chart(missing_df.set_index("Column"))
+
 st.divider()
 
 st.subheader("📊 Column Statistics")
@@ -206,9 +190,7 @@ st.divider()
 
 st.subheader("📋 Dataset Memory Information")
 
-memory_usage = (
-    df.memory_usage(deep=True).sum() / (1024 * 1024)
-)
+memory_usage = df.memory_usage(deep=True).sum() / (1024 * 1024)
 
 st.info(f"Dataset Memory Usage : {memory_usage:.2f} MB")
 
@@ -216,28 +198,14 @@ st.divider()
 
 st.subheader("📥 Download Dataset")
 
-download_col1, download_col2 = st.columns(2)
-
-with download_col1:
-
-    csv = filtered_df.to_csv(index=False).encode("utf-8")
-
-    st.download_button(
-        "⬇ Download CSV",
-        data=csv,
-        file_name="Filtered_Dataset.csv",
-        mime="text/csv"
-    )
-
-
-
-    csv = filtered_df.to_csv(index=False).encode("utf-8")
+csv = filtered_df.to_csv(index=False).encode("utf-8")
 
 st.download_button(
     label="⬇ Download CSV",
     data=csv,
     file_name="Filtered_Dataset.csv",
     mime="text/csv",
+    key="download_filtered_csv"
 )
 st.divider()
 
